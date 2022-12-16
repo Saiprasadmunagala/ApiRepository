@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="crossBrowser">
+  <test name="chrome">
+  <parameter name="BROWSER" value="chrome"></parameter>
+    <classes>
+      <class name="ApiEndToEndScenario.Put_VerifyGUI_ValidateDB"/>
+      <class name="ApiEndToEndScenario.Create_VrifyUi_ValidateDB"/>
+      <class name="ApiEndToEndScenario.Create_UpdateGUI_ValidateInDb"/>
+      
+    </classes>
+  </test> <!-- ApiEndToEndScenarios -->
+
+<test name = "FireFox">
+<parameter name="Browser" value="FireFox"></parameter>
+    <classes>
+      <class name="ApiEndToEndScenario.Delete_VerifyGUI_ValidateDb"/>
+      <class name="ApiEndToEndScenario.Assignement_1"/>
+      <class name="ApiEndToEndScenario.Get_verifyInGUI_ValidateDB"/>
+    </classes>
+  </test> <!-- ApiEndToEndScenarios -->
+</suite> <!-- ApiFullRegression -->
